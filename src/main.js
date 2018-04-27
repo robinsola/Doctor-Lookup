@@ -27,10 +27,15 @@ import './styles.css';
 
      promise.then(function(response) {
        let body = JSON.parse(response);
-       let display = body.data[0].practices;
-       for(let i=0; i<display.length; i++) {
-         $("#list").append(`<li>${display[i].name}</li>`);
-       }
+       let docList = body.data[0].practices;
+         for(let i=0; i<docList.length; i++) {
+           let name = docList[i].name;
+           let address = docList[i].visit_address.street;
+           let phone = docList[i].phones[0].number;
+           let website = docList[i].website;
+           let accepting = docList[i].accepts_new_patients;
+           $("#list").append(`<li>${name}<br>${address}<br>${phone}<br>${website}<br>${accepting}</li>`);
+         }
       //  $("#name").text(`Name: ${display.name}`);
       //  $("#address").text(`Address: ${body.data[0].practices[0].visit_address.street}`);
       //  $("#phone").text(`Phone: ${body.data[0].practices[0].phones[0].number}`);

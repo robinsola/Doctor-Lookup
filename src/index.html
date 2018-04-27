@@ -8,11 +8,17 @@
       <h1>Doctor Lookup</h1>
       <p><em>Portland's #1 doctor search site!</em></p>
       <form id="user-input">
-        <p>Please tell us your symptom to see doctor information.</p>
+        <p>Submit a name to find specific doctor.</p>
         <div class="form-group">
-        <label for="symptom">symptom:</label>
-        <input id="symptom" type="text">
-      </div>
+          <label for="doctor">Doctor Name:</label>
+          <input id="doctor" type="text">
+        </div>
+        <p>-OR-</p>
+        <p>Tell us your symptom to see list of doctors.</p>
+        <div class="form-group">
+          <label for="symptom">symptom:</label>
+          <input id="symptom" type="text">
+        </div>
         <button type="submit" class="btn btn-info">find doctor</button>
       </form>
       <div class="output">

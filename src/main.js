@@ -7,16 +7,17 @@ import './styles.css';
  $(document).ready(function() {
    $("#user-input").submit(function(event) {
      event.preventDefault();
-
+     let doctor = $("#doctor").val();
      let symptom = $("#symptom").val();
+     $("#doctor").val("");
      $("#symptom").val("");
      let docApi = new DocApi();
-     let promise = docApi.doctorPromise(symptom);
+     let promise = docApi.doctorPromise(doctor, symptom);
 
      promise.then(function(response) {
        let body = JSON.parse(response);
        if (body.data.length === 0) {
-         alert("There are currently no doctors available for that symptom, try a similar symptom.");
+         alert("There are currently no doctors available for your criteria.");
        }
        for (let j=0; j<body.data.length; j++) {
          let docList = body.data[j].practices;

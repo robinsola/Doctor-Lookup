@@ -11,6 +11,7 @@ import './styles.css';
      let symptom = $("#symptom").val();
      $("#doctor").val("");
      $("#symptom").val("");
+     $("#list").empty();
      let docApi = new DocApi();
      let promise = docApi.doctorPromise(doctor, symptom);
 

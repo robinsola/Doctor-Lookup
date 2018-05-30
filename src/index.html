@@ -4,29 +4,28 @@
     <title>Doctor Lookup</title>
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-        <h1>Lookup Doc</h1>
-        <p><em>Portland's #1 doctor search site!</em></p>
-      </div>
+    <div class="header">
+      <h1><img src="https://www.shareicon.net/data/512x512/2016/09/07/826584_doctor_512x512.png" alt="doctor icon">LookUp Doc</h1>
+      <p><em>Portland's #1 doctor search site!</em></p>
+    </div>
+    <div class="form-container">
       <form id="user-input">
-        <p>Submit a name to find specific doctor.</p>
+        <h3>Find a Doctor</h3>
         <div class="form-group">
-          <label for="doctor">Doctor Name: </label>
+          <label for="doctor">Search by doctor name:</label><br>
           <input id="doctor" type="text">
         </div>
         <p>or</p>
-        <p>Tell us your symptom to see list of doctors.</p>
         <div class="form-group">
-          <label for="symptom">Symptom: </label>
+          <label for="symptom">Search by symptom:</label><br>
           <input id="symptom" type="text">
         </div>
-        <button type="submit" class="btn btn-info">find doctor</button>
+        <button type="submit" class="btn">find doctor</button>
       </form>
-      <div class="output">
-        <ul id="list">
-        </ul>
-      </div>
+    </div>
+    <div class="output">
+      <ul id="list">
+      </ul>
     </div>
   </body>
 </html>
